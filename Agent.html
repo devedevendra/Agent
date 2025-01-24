@@ -5,24 +5,23 @@
 <body>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
 <script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+    function initEmbeddedMessaging() {
+        try {
+            embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-			embeddedservice_bootstrap.init(
-				'00DV9000002JCSY',
-				'Test_Public_Agent',
-				'https://encorefocus--dev.sandbox.my.site.com/ESWTestPublicAgent1737703199903',
-				{
-					scrt2URL: 'https://encorefocus--dev.sandbox.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
+            embeddedservice_bootstrap.init(
+                '00DV9000002JCSY',
+                'Test_Web',
+                'https://encorefocus--dev.sandbox.my.site.com/ESWTestWeb1737698989270',
+                {
+                    scrt2URL: 'https://encorefocus--dev.sandbox.my.salesforce-scrt.com'
+                }
+            );
+        } catch (err) {
+            console.error('Error loading Embedded Messaging: ', err);
+        }
+    };
 </script>
-<script type='text/javascript' src='https://encorefocus--dev.sandbox.my.site.com/ESWTestPublicAgent1737703199903/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
+<script type='text/javascript' src='https://encorefocus--dev.sandbox.my.site.com/ESWTestWeb1737698989270/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 </body>
 </html>
