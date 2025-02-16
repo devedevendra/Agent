@@ -38,7 +38,15 @@
 	window.addEventListener("onEmbeddedMessagingReady", e => {
         //log event
         console.log("onEmbeddedMessagingReady event triggered");
-        
+        document.querySelectorAll('.embedded-messaging-conversation-entry-listitem').forEach(li => {
+	    let img = document.createElement('img');
+	    img.src = 'https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+	    img.alt = 'Agent Image';
+	    img.style.width = '320px';
+	    img.style.height = '100px';
+	    li.appendChild(img);
+	});
+
         embeddedservice_bootstrap.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
 	embeddedservice_bootstrap.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
 			
