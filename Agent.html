@@ -33,6 +33,17 @@
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
+
+
+	window.addEventListener("onEmbeddedMessagingReady", e => {
+        //log event
+        console.log("onEmbeddedMessagingReady event triggered");
+        
+        embeddedservice_bootstrap.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+	embeddedservice_bootstrap.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+			
+    });
+    //Passing Web Context to Prechat - END
 </script>
 <script type='text/javascript' src='https://concordiatheologicalseminary3--agentforce.sandbox.my.site.com/ESWAgentforceWebAgent1737914585624/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
