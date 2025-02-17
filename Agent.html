@@ -14,9 +14,10 @@
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			console.log(embeddedservice_bootstrap);
 			
-			embedded_svc.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
-			embedded_svc.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+			embeddedservice_bootstrap.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+			embeddedservice_bootstrap.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
 			embeddedservice_bootstrap.init(
 				'00DcW000001rbnF',
 				'Agentforce_Web_Agent',
@@ -26,8 +27,7 @@
 				}
 			);
 
-			embedded_svc.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
-			embedded_svc.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+			
 			
 		} catch (err) {
 			console.error('Error loading Embedded Messaging: ', err);
@@ -38,9 +38,9 @@
 	window.addEventListener("onEmbeddedMessagingReady", e => {
         //log event
 		setTimeout(()=>{
-        console.log("onEmbeddedMessagingReady event triggered");
-        embedded_svc.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
-	embedded_svc.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+        	console.log("onEmbeddedMessagingReady event triggered");
+	        embedded_svc.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+		embedded_svc.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
 		
 		},10000);
 
