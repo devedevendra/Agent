@@ -15,8 +15,8 @@
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 			
-			embeddedservice_bootstrap.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
-			embeddedservice_bootstrap.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+			embedded_svc.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+			embedded_svc.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
 			embeddedservice_bootstrap.init(
 				'00DcW000001rbnF',
 				'Agentforce_Web_Agent',
@@ -26,8 +26,8 @@
 				}
 			);
 
-			embeddedservice_bootstrap.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
-			embeddedservice_bootstrap.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+			embedded_svc.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+			embedded_svc.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
 			
 		} catch (err) {
 			console.error('Error loading Embedded Messaging: ', err);
@@ -39,18 +39,12 @@
         //log event
 		setTimeout(()=>{
         console.log("onEmbeddedMessagingReady event triggered");
-        document.querySelectorAll('.embedded-messaging-conversation-entry-listitem').forEach(li => {
-	    let img = document.createElement('img');
-	    img.src = 'https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
-	    img.alt = 'Agent Image';
-	    img.style.width = '320px';
-	    img.style.height = '100px';
-	    li.appendChild(img);
-	});
+        embedded_svc.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+	embedded_svc.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+		
 		},10000);
 
-        embeddedservice_bootstrap.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
-	embeddedservice_bootstrap.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
+       
 			
     });
     //Passing Web Context to Prechat - END
