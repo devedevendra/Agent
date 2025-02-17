@@ -15,7 +15,10 @@
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 			console.log(embeddedservice_bootstrap);
-			
+			embeddedservice_bootstrap.brandingData.push({
+			        "n": "prechatBackgroundImgURL",
+			        "v": "https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp"
+			    });
 			embeddedservice_bootstrap.settings.prechatBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
 			embeddedservice_bootstrap.settings.waitingStateBackgroundImgURL='https://wp.salesforce.com/en-us/wp-content/uploads/sites/4/2024/09/img-agent-1.webp';
 			embeddedservice_bootstrap.init(
@@ -35,7 +38,7 @@
 	};
 
 
-	window.addEventListener("onEmbeddedMessagingReady", e => {
+	/*window.addEventListener("onEmbeddedMessagingReady", e => {
         //log event
 		setTimeout(()=>{
         	console.log("onEmbeddedMessagingReady event triggered");
@@ -46,7 +49,7 @@
 
        
 			
-    });
+    });*/
     //Passing Web Context to Prechat - END
 </script>
 <script type='text/javascript' src='https://concordiatheologicalseminary3--agentforce.sandbox.my.site.com/ESWAgentforceWebAgent1737914585624/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
